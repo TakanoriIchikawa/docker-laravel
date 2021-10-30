@@ -4,5 +4,7 @@
 ```git clone https://github.com/TakanoriIchikawa/docker-laravel.git```
 2. ディレクトリの変更  
 ```cd docker-laravel```
-3. イメージのビルド＆コンテナの起動  
+3. .envの設定  
+```cp .env.example .env ```
+4. イメージのビルド＆コンテナの起動  
 ```docker-compose up -d --build```
