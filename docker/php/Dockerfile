@@ -1,4 +1,4 @@
-FROM php:8.0-fpm
+FROM php:7.4-fpm
 
 COPY ./docker/php/php-fpm.d/zzz-docker.conf /usr/local/etc/php-fpm.d/zzz-docker.conf
 COPY //docker/php//php.ini /usr/local/etc/php/php.ini
