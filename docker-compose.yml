@@ -2,7 +2,6 @@ version: "3"
 
 services:
   app:
-    container_name: php
     build: 
       context: .
       dockerfile: ./docker/php/Dockerfile
@@ -16,7 +15,6 @@ services:
     restart: always
 
   web:
-    container_name: nginx
     build: 
       context: .
       dockerfile: ./docker/nginx/Dockerfile
@@ -34,7 +32,6 @@ services:
       - app
 
   db:
-    container_name: mysql
     build: 
       context: .
       dockerfile: ./docker/mysql/Dockerfile
