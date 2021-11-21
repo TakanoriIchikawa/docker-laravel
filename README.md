@@ -18,3 +18,6 @@
       ```
 4. イメージのビルド＆コンテナの起動  
 ```docker-compose up -d --build```
+
+5. 接続確認  
+```http;//localhost:84```
