@@ -20,4 +20,4 @@
 ```docker-compose up -d --build```
 
 5. 接続確認  
-http;//localhost:84
+http://localhost:ホストに割り当てたポート（nginx）
