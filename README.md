@@ -9,12 +9,12 @@
       ```cp .env.example .env ```
     - .env編集  
       ```
-        WEB_PORT=
-        DB_NAME=docker-laravel
-        DB_USER=docker-laravel
-        DB_PORT=3310
-        DB_PASSWORD=docker-laravel
-        DB_ROOT_PASSWORD=root
+      WEB_PORT= // ホストに割り当てるポート（nginx）
+      DB_NAME= // DB名
+      DB_USER= // DB接続時のユーザー
+      DB_PORT= // ホストに割り当てるポート（mysql）
+      DB_PASSWORD= // DB接続時のパスワード
+      DB_ROOT_PASSWORD= // B接続時のパスワード（root）
       ```
 4. イメージのビルド＆コンテナの起動  
 ```docker-compose up -d --build```
