@@ -4,14 +4,14 @@ COPY ./docker/php/php.ini /usr/local/etc/php/php.ini
 COPY ./docker/php/php-fpm.d/zzz-docker.conf /usr/local/etc/php-fpm.d/zzz-docker.conf
 
 # Composer
-COPY --from=composer:2.0 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:2.1 /usr/bin/composer /usr/bin/composer
 
 # Node.js
 COPY --from=node:16.0 /usr/local/bin /usr/local/bin
 COPY --from=node:16.0 /usr/local/lib /usr/local/lib
 
-RUN apt-get update && \
-    apt-get -y install \
+RUN apt update && \
+    apt -y install \
     git \
     zip \
     unzip \
