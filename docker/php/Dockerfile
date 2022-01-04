@@ -19,6 +19,14 @@ RUN apt update && \
     && docker-php-ext-install opcache \
     && docker-php-ext-install pdo_mysql bcmath
 
+RUN apt install -y zlib1g-dev
+RUN pecl install grpc \
+    && pecl install protobuf \
+    && docker-php-ext-enable grpc protobuf
+# RUN pecl install grpc
+# RUN pecl install protobuf
+# RUN docker-php-ext-enable grpc protobuf
+
 WORKDIR /var/www/html
 
 # TODO: コンテナ起動時にLaravelの初期設定も完了させたい
